@@ -1,0 +1,15 @@
+CREATE SCHEMA IF NOT EXISTS `sampledb`;
+
+use sampledb;
+
+CREATE TABLE customers (
+id INT(11) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(45) NOT NULL,
+surname VARCHAR(45) NOT NULL,
+age INT(11));
+
+CREATE TABLE contacts (
+id INT(11) PRIMARY KEY AUTO_INCREMENT,
+id_customer INT(11) NOT NULL,
+contactType INT(11) NOT NULL,
+contact VARCHAR(45) NOT NULL);
